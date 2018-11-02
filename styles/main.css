@@ -46,7 +46,24 @@ img{
 	position: relative;
 	margin: 0;
 	padding: 0;
-	width: 838px;
-	height: 596px;
+	width: 288px;
+	height: 512px;
+}
 
+.mvers{
+	background-color: rgba(57,74,93, .5);
+}
+
+#btn{
+	display: none;
+	position: absolute;
+	background-color: #37C33C;
+	width: 200px;
+	height: 50px;
+	border-radius: 10px;
+	border:1px solid black;
+	color: #fff;
+	font-size: 25px;
+	top: 50%;
+	left:44px;
 }
