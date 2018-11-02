@@ -1,9 +1,13 @@
+@viewport {  
+	width: device-width;
+	user-zoom: fixed;
+}
+
 *{
 	user-select: none;
 	background-color: #294964;
 	margin:0;
 	padding: 0;
-	
 }
 
 body{
