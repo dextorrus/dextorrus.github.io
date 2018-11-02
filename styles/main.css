@@ -1,0 +1,44 @@
+*{
+	user-select: none;
+	background-color: #294964;
+	
+}
+
+body{
+	position:relative;
+}
+
+canvas{
+	margin-left: 500px;
+	border:1px solid black;
+	z-index: 9;
+
+}
+
+p, span{
+	z-index: 1;
+	
+}
+
+.text{
+	position: absolute; 
+	top: 200px;
+	left: 50px;
+	font-size: 40px;
+	color: #43FFFF;
+}
+
+img{
+	width: 350px;
+	height: 90px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+#game{
+	margin: 0;
+	padding: 0;
+	width: 838px;
+	height: 596px;
+}
