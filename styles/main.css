@@ -9,9 +9,9 @@ body{
 }
 
 canvas{
-	margin-left: 500px;
+	margin-left: 0;
 	border:1px solid black;
-	z-index: 9;
+	z-index: 1;
 
 }
 
@@ -21,11 +21,11 @@ p, span{
 }
 
 .text{
-	position: absolute; 
-	top: 200px;
-	left: 50px;
-	font-size: 40px;
+	position: absolute;
+	font-size: 20px;
 	color: #43FFFF;
+
+	background-color: rgba(0, 125, 215, 0.0);
 }
 
 img{
@@ -37,6 +37,7 @@ img{
 }
 
 #game{
+	position: relative;
 	margin: 0;
 	padding: 0;
 	width: 838px;
