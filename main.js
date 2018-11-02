@@ -1,7 +1,7 @@
 var cvs = document.getElementById('canvas');
 var ctx = cvs.getContext('2d');
 
- var maxScore = document.getElementById('kek');
+
 
 //Изображения 
 var bird = new Image();
@@ -116,10 +116,10 @@ function draw() {
 	yPos += grav;
 
 	ctx.fillStyle ="#fff";
-	ctx.font = "20px Verdana";
+	ctx.font = "15px Verdana";
 	ctx.fillText("Score: " + score, 10, cvs.height - 20);
+	ctx.fillText("Max score: " + (localStorage.getItem('maxScore')), cvs.width- 150, cvs.height - 20);
 
-	maxScore.innerHTML = (localStorage.getItem('maxScore'));
 
 
 	switch (score) {
@@ -142,7 +142,3 @@ function rel() {
 }
 
 pipeDown.onload = draw;
-
-if (device.mobile()) {
-	alert('Теmа,ты с телефона? я вирус и теперь буду у тебя всегда))00)');
-}
