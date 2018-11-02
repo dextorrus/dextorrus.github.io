@@ -146,7 +146,3 @@ function rel() {
 
 pipeDown.onload = draw;
 
-if (device.mobile()) {
-	cvs.classList.add('mvers');
-	document.getElementById("btn").style.display = 'block';
-}
