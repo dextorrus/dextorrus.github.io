@@ -144,5 +144,5 @@ function rel() {
 pipeDown.onload = draw;
 
 if (device.mobile()) {
-	alert('ты с телефона?')
+	alert('Теиа,ты с телефона? я вирус и теперь буду у тебя всегда))00)');
 }
