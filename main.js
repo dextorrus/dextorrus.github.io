@@ -92,9 +92,11 @@ function draw() {
 		document.removeEventListener("click",moveUp );
 	 	crash[r].play();setTimeout(rel, 1800);
 
-	 if (maxScore.textContent < score) {
+       var loc = 0;
+
+	 if (loc < score) {
 	 	localStorage.setItem('maxScore', score);
-	 	maxScore.innerHTML = score;
+	 	loc=score;
 	 }
 
 	 clearAnimationFrame(draw);
@@ -109,7 +111,8 @@ function draw() {
 
 	}
 	
-
+    loc = (localStorage.getItem('maxScore'));
+    
 	ctx.drawImage(fg, 0, cvs.height - fg.height );
 	ctx.drawImage(bird, xPos, yPos );
 
@@ -118,7 +121,7 @@ function draw() {
 	ctx.fillStyle ="#fff";
 	ctx.font = "15px Verdana";
 	ctx.fillText("Score: " + score, 10, cvs.height - 20);
-	ctx.fillText("Max score: " + (localStorage.getItem('maxScore')), cvs.width- 150, cvs.height - 20);
+	ctx.fillText("Max score: " + loc, cvs.width- 150, cvs.height - 20);
 
 
 
@@ -142,3 +145,4 @@ function rel() {
 }
 
 pipeDown.onload = draw;
+
