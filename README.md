@@ -1,2 +1,0 @@
-# dextorrus.github.io
-lolGame
