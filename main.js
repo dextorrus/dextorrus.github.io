@@ -2,6 +2,11 @@ var cvs = document.getElementById('canvas');
 var ctx = cvs.getContext('2d');
 
 
+ var loc = {
+       	value: localStorage.getItem('maxScore')
+       }
+
+
 
 //Изображения 
 var bird = new Image();
@@ -35,14 +40,14 @@ var crash =[
 crash0,
 crash1
 ];
-//переменная для масcива падений
+//переменная для масива падений
 var r = Math.floor(Math.random()*(crash.length - 0) + 0);
 
 //Изображения расстояние между трубами
 var gap = 150;
 //при нажатии на пкм
-document.addEventListener("click",moveUp );
-document.addEventListener("targetTouches",moveUp );
+cvs.addEventListener("click",moveUp );
+cvs.addEventListener("targetTouches",moveUp );
 
 //Полет лехи
 function moveUp() {
@@ -92,14 +97,14 @@ function draw() {
 		document.removeEventListener("click",moveUp );
 	 	crash[r].play();setTimeout(rel, 1800);
 
-       var loc = 0;
+      
 
-	 if (loc < score) {
+	 if (loc.value < score) {
 	 	localStorage.setItem('maxScore', score);
-	 	loc=score;
+	 	loc.value=score;
 	 }
-
 	 clearAnimationFrame(draw);
+
 	}
 
 
@@ -111,8 +116,8 @@ function draw() {
 
 	}
 	
-    loc = (localStorage.getItem('maxScore'));
-    
+    var local = localStorage.getItem('maxScore');
+
 	ctx.drawImage(fg, 0, cvs.height - fg.height );
 	ctx.drawImage(bird, xPos, yPos );
 
@@ -121,7 +126,7 @@ function draw() {
 	ctx.fillStyle ="#fff";
 	ctx.font = "15px Verdana";
 	ctx.fillText("Score: " + score, 10, cvs.height - 20);
-	ctx.fillText("Max score: " + loc, cvs.width- 150, cvs.height - 20);
+	ctx.fillText("Max score: " + local, cvs.width- 150, cvs.height - 20);
 
 
 
@@ -140,9 +145,7 @@ function draw() {
 }
 
 function rel() {
-	window.location.reload();
-
+location.reload();
 }
 
 pipeDown.onload = draw;
-
