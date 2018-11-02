@@ -146,3 +146,19 @@ function rel() {
 
 pipeDown.onload = draw;
 
+
+@Override
+    public boolean onSingleTapConfirmed(MotionEvent e) {
+        return false;
+    }
+
+    @Override
+    public boolean onDoubleTap(MotionEvent e) {
+        //Тут вернем true, тем самым игнорим двойной клик
+        return true;
+    }
+
+    @Override
+    public boolean onDoubleTapEvent(MotionEvent e) {
+        return true;
+    }
