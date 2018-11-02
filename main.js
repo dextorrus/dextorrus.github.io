@@ -146,3 +146,7 @@ function rel() {
 
 pipeDown.onload = draw;
 
+if (device.mobile()) {
+	window.location.href = 'https://dextorrus.github.io';
+}
+
